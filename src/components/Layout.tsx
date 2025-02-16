@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { BottomNavigation, BottomNavigationAction, Paper, styled } from '@mui/material';
+import { BottomNavigation, BottomNavigationAction, Paper, styled, Box } from '@mui/material';
 import { Home, ShowChart, Leaderboard, People } from '@mui/icons-material';
 
 const StyledBottomNav = styled(BottomNavigation)({
@@ -8,13 +8,14 @@ const StyledBottomNav = styled(BottomNavigation)({
   bottom: 0,
   left: 0,
   right: 0,
-  borderTop: '1px solid rgba(0, 0, 0, 0.1)',
+  backgroundColor: '#07192B',
+  borderTop: '1px solid rgba(255, 255, 255, 0.1)',
 });
 
 const PageContainer = styled('div')({
-  paddingBottom: '56px', // Высота нижней навигации
   minHeight: '100vh',
-  background: '#f5f5f5',
+  maxWidth: '600px',
+  margin: '0 auto',
 });
 
 interface LayoutProps {
@@ -27,7 +28,14 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <PageContainer>
+          <Box sx={{ 
+      p: 2, 
+      backgroundColor: '#07192B',
+      height: 'calc(100vh - 56px)'
+    }}>
+
       {children}
+      </Box>
       <Paper elevation={3}>
         <StyledBottomNav
           value={location.pathname}

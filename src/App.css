@@ -1,5 +1,6 @@
 #root {
   max-width: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -8,14 +9,9 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
-}
-
-.App {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: white;
-  min-height: 100vh;
+  background-color: #07192B;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 10px;
 }
 
 .logo {
