@@ -28,13 +28,15 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <PageContainer>
-          <Box sx={{ 
-      p: 2, 
-      backgroundColor: '#07192B',
-      height: 'calc(100vh - 56px)'
-    }}>
+      <Box sx={{
+        p: 2,
+        backgroundColor: '#07192B',
+        height: 'calc(100vh - 56px)',
+        overflowY: 'scroll',
+        paddingBottom: '30px'
+      }}>
 
-      {children}
+        {children}
       </Box>
       <Paper elevation={3}>
         <StyledBottomNav
